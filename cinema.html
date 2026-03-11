@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Cinema Insights</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#6b0000;
+margin:0;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(#8b0000,#4b0000);
+text-align:center;
+padding:40px 20px;
+box-shadow:0 4px 15px rgba(0,0,0,0.6);
+}
+
+header h1{
+font-size:48px;
+color:gold;
+margin:0;
+text-shadow:0 0 10px gold,0 0 25px orange;
+letter-spacing:2px;
+}
+
+header p{
+color:#ffd95c;
+font-size:18px;
+margin-top:10px;
+}
+
+/* MOVIE GRID */
+
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+padding:40px;
+}
+
+.movie{
+background:#fff5e6;
+width:260px;
+border-radius:12px;
+padding:14px;
+box-shadow:0 8px 18px rgba(0,0,0,0.6);
+text-align:center;
+transition:transform 0.3s;
+}
+
+.movie:hover{
+transform:scale(1.08);
+animation:pulse 0.8s infinite alternate;
+}
+
+@keyframes pulse{
+from{box-shadow:0 0 10px gold;}
+to{box-shadow:0 0 30px orange;}
+}
+
+.movie img{
+width:100%;
+height:360px;
+object-fit:cover;
+border-radius:8px;
+}
+
+.movie h2{
+color:#7a0000;
+margin:10px 0;
+}
+
+details{
+background:#ffe0b3;
+padding:10px;
+border-radius:6px;
+margin-top:10px;
+}
+
+summary{
+cursor:pointer;
+font-weight:bold;
+}
+
+ul{
+text-align:left;
+padding-left:18px;
+}
+
+/* REVIEW CAROUSEL */
+
+.reviews-section{
+background:#4b0000;
+padding:40px 20px;
+overflow:hidden;
+}
+
+.review-track{
+display:flex;
+gap:20px;
+width:max-content;
+animation:scroll 25s linear infinite;
+}
+
+.review-card{
+background:#fff5e6;
+width:240px;
+border-radius:10px;
+padding:15px;
+box-shadow:0 5px 12px rgba(0,0,0,0.5);
+text-align:center;
+flex-shrink:0;
+}
+
+.review-card img{
+width:60px;
+height:60px;
+border-radius:50%;
+}
+
+.stars{
+color:gold;
+font-size:18px;
+margin:5px 0;
+}
+
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
+}
+
+footer{
+background:#4b0000;
+color:gold;
+text-align:center;
+padding:15px;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🎬 Cinema Insights</h1>
+<p>Movie Reviews from the Big Screen</p>
+</header>
+
+<div class="container">
+
+<div class="movie">
+<a href="https://www.google.com/search?q=Titanic+movie" target="_blank">
+<img src="https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg">
+</a>
+<h2>Titanic</h2>
+<details>
+<summary>Show Description & Reviews</summary>
+<p>A tragic love story aboard the doomed RMS Titanic.</p>
+<ul>
+<li>"Still makes me cry every time." – Rahul Mehta ⭐⭐⭐⭐⭐</li>
+<li>"A masterpiece of cinema." – Ananya Kapoor ⭐⭐⭐⭐</li>
+<li>"Timeless and emotional." – David Chen ⭐⭐⭐⭐⭐</li>
+</ul>
+</details>
+</div>
+
+<div class="movie">
+<a href="https://www.google.com/search?q=Interstellar+movie" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg">
+</a>
+<h2>Interstellar</h2>
+<details>
+<summary>Show Description & Reviews</summary>
+<p>A team of astronauts travel through a wormhole to save humanity.</p>
+<ul>
+<li>"Mind blowing visuals." – Karan Shah ⭐⭐⭐⭐⭐</li>
+<li>"Best sci-fi movie ever." – Emily Parker ⭐⭐⭐⭐</li>
+<li>"The soundtrack is legendary." – Arjun Nair ⭐⭐⭐⭐⭐</li>
+</ul>
+</details>
+</div>
+
+<div class="movie">
+<a href="https://www.google.com/search?q=Spider+Man+No+Way+Home" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg">
+</a>
+<h2>Spider-Man: No Way Home</h2>
+<details>
+<summary>Show Description & Reviews</summary>
+<p>Peter Parker's identity is revealed and he asks Doctor Strange for help, opening the multiverse and bringing villains from other Spider-Man universes.</p>
+<ul>
+<li>"An amazing multiverse adventure." – Sophia Martinez ⭐⭐⭐⭐⭐</li>
+<li>"Seeing the old Spider-Men again was legendary." – Rohan Kulkarni ⭐⭐⭐⭐⭐</li>
+<li>"A perfect Marvel fan experience." – Daniel Brooks ⭐⭐⭐⭐</li>
+</ul>
+</details>
+</div>
+
+<div class="movie">
+<a href="https://www.google.com/search?q=The+Tomorrow+War+movie" target="_blank">
+<img src="https://image.tmdb.org/t/p/w500/34nDCQZwaEvsy4CFO5hkGRFDCVU.jpg">
+</a>
+<h2>The Tomorrow War</h2>
+<details>
+<summary>Show Description & Reviews</summary>
+<p>People from the present travel to the future to fight aliens.</p>
+<ul>
+<li>"Insane action scenes." – Jason Walker ⭐⭐⭐⭐</li>
+<li>"The aliens were terrifying." – Neha Deshpande ⭐⭐⭐⭐</li>
+<li>"Great popcorn movie." – Marcus Lee ⭐⭐⭐⭐</li>
+</ul>
+</details>
+</div>
+
+<div class="movie">
+<a href="https://www.google.com/search?q=Avatar+movie" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Avatar_%282009_film%29_poster.jpg">
+</a>
+<h2>Avatar</h2>
+<details>
+<summary>Show Description & Reviews</summary>
+<p>A soldier becomes part of the alien world Pandora.</p>
+<ul>
+<li>"Visually unbelievable." – Liam Carter ⭐⭐⭐⭐⭐</li>
+<li>"Pandora feels alive." – Priya Iyer ⭐⭐⭐⭐</li>
+<li>"Amazing theater experience." – Ethan Collins ⭐⭐⭐⭐⭐</li>
+</ul>
+</details>
+</div>
+
+</div>
+
+
+<div class="reviews-section">
+
+<div class="review-track">
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h4>Daniel Reed</h4>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Feels like browsing a real movie website."</p>
+</div>
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/women/45.jpg">
+<h4>Kartik Parmar</h4>
+<div class="stars">⭐⭐⭐⭐</div>
+<p>"Love the cinema theme and animations."</p>
+</div>
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/men/76.jpg">
+<h4>Hrritish Sudhir</h4>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Clean layout and easy to read reviews."</p>
+</div>
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/women/68.jpg">
+<h4>Olivia Brooks</h4>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Movie posters look awesome."</p>
+</div>
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/men/55.jpg">
+<h4>Praneet Gajare</h4>
+<div class="stars">⭐⭐⭐⭐</div>
+<p>"Feels like a mini IMDb."</p>
+</div>
+
+
+<!-- duplicated for smooth looping -->
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<h4>Viraj Surve</h4>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Feels like browsing a real movie website."</p>
+</div>
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/women/45.jpg">
+<h4>Sophia Grant</h4>
+<div class="stars">⭐⭐⭐⭐</div>
+<p>"Love the cinema theme and animations."</p>
+</div>
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/men/76.jpg">
+<h4>Michael Torres</h4>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Clean layout and easy to read reviews."</p>
+</div>
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/women/68.jpg">
+<h4>Hitesh Manjal</h4>
+<div class="stars">⭐⭐⭐⭐⭐</div>
+<p>"Movie posters look awesome."</p>
+</div>
+
+<div class="review-card">
+<img src="https://randomuser.me/api/portraits/men/55.jpg">
+<h4>James Patel</h4>
+<div class="stars">⭐⭐⭐⭐</div>
+<p>"Feels like a mini IMDb."</p>
+</div>
+
+</div>
+</div>
+
+<footer>
+<p>© 2026 Cinema Insights</p>
+</footer>
+
+</body>
+
+</html>
+
